@@ -1,8 +1,9 @@
 // import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import { AiFillEdit } from "react-icons/ai";
-// import './Todoitem.css'
+import './Todoitem.css'
 import { IoCheckmarkDoneSharp, IoClose } from "react-icons/io5";
+// import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 
 const TodoItem = (props) => {
@@ -34,8 +35,8 @@ const TodoItem = (props) => {
         defaultValue={` ${item.item.todo} ${item.item.description}  ${item.item.dueDate}`}
         onKeyPress={(e) => update(item.id, inputRef.current.value, e)}
       />
-      <div className="btns">
-        <button onClick={() => changeFocus()}>
+      <div className="btns ">
+        <button onClick={() => changeFocus()} >
           <AiFillEdit /> Edit
         </button>
         {!item.completed && (
